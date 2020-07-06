@@ -6,8 +6,8 @@ export default () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-
-        await axios.post('http://localhost:4000/posts', {
+        // 'create' was added because of config issues with nginx
+        await axios.post('http://diegosarmiento.com/posts/create', {
             title
         });
 

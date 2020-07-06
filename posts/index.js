@@ -15,8 +15,8 @@ const posts = {};
 app.get('/posts', (req, res) => {
     res.send(posts);
 });
-
-app.post('/posts', async (req, res) => {
+// 'create' was added because of config issues with nginx
+app.post('/posts/create', async (req, res) => {
     // Since there is no real DB, let's create an ID
     const id = randomBytes(4).toString('hex');
     // Title is the input of our simple form
